@@ -1,12 +1,19 @@
-# CS189_project
+## CS189_project
 
 Comparitive genomics project
 
-# Background
+## Background
 
 The goal of this experiment was originally to compare genomes of 5 different yeast strains. However, we found that the similarity of genome can be affected by contiguity depending on the types of program used.
 
-# Satsuma pipeline
+## Pipeline
+
+## Pipeline steps
+
+# 1) Setting Up Anaconda Environment
+All of the scripts are ran in HPC server using Anaconda environment. For installation of Anaconda environment, please follow https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html. Then import beoungl.yml following https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html. 
+*Make sure the Python version is in 2.7.
+
 ```
 #!/bin/bash
 #$ -N satsuma_yeast_script
