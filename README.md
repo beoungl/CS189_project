@@ -15,14 +15,31 @@ All of the scripts are ran in HPC server using Anaconda environment. For install
 *Make sure the Python version is in 2.7.
 
 ## 2) Pre-processing
+This process was required to filter out any data less than 1kb, and shorten contig name so it is easier to visualize in graph.s
+
+###### 2.1) Filter conting less than 1kb
+The data was processed using [python script](https://github.com/cvraut/CS189_project/blob/master/scripts/ren_condensed.py). 
+
+###### 2.2) Contig name change
 
 ## 3) Phylogenetic tree
+
+###### 3.1) BLAST
+
+###### 3.2) ClustalW
+
+###### 3.3) Etetoolkit treeviewer
 
 ## 4) Sastusma2
 
 ## 5) MUMMER
 
+###### 5.1) NUCMER
+
+###### 5.2) Mummerplot
+
 ## 6) Conclusion
+Refer to the [final paper](https://docs.google.com/document/d/1KNQ6TGLGn5cANC1CSuzZIuPjTDEG9VN8L9dKRxzwwns/edit) for conclusion and analysis.
 
 # Directory tree
 
