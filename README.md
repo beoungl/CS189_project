@@ -12,11 +12,11 @@ The goal of this experiment was originally to compare genomes of 5 different yea
 #$ -N satsuma_yeast_script
 #$ -t 1-4        ## task ids
 #$ -q pub8i      ## queue to send task to
-## -ckpt restart ## include to make sure tasks are suspended & restart. Only for use in suspendable queues.
-### -m beas
-### -M craut@uci.edu
-### -o
-### -e
+\## -ckpt restart ## include to make sure tasks are suspended & restart. Only for use in suspendable queues.
+\### -m beas
+\### -M craut@uci.edu
+\### -o
+\### -e
 #$ -pe openmp 2  ## for multithreaded applications. pe openmp INT, integer is # of cores
 
 source ~/.miniconda3rc
