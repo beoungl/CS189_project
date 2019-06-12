@@ -2,7 +2,7 @@
 
 Comparitive genomics project
 
->Background
+# Background
 
 The goal of this experiment was originally to compare genomes of 5 different yeast strains. However, we found that the similarity of genome can be affected by contiguity depending on the types of program used.
 
