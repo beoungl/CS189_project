@@ -21,8 +21,10 @@ This process was required to filter out any data less than 1kb, and shorten cont
 The data was processed using [python script](https://github.com/cvraut/CS189_project/blob/master/scripts/ren_condensed.py). 
 
 ###### 2.2) Contig name change
+The conting name was changed to smaller, more presentable name using [python script](https://github.com/cvraut/CS189_project/blob/master/scripts/ren_contigs.py).
 
 ## 3) Phylogenetic tree
+In this step, phylogenetic tree was created using BLAST to find common gene amongst the yeast strains, ClustalW to obtain branch length between yeasts and Etetoolkit treeview to create phylogenetic tree.
 
 ###### 3.1) BLAST
 
