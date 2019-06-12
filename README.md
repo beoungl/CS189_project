@@ -11,7 +11,7 @@ The goal of this experiment was originally to compare genomes of 5 different yea
 # Pipeline steps
 
 ## 1) Setting Up Anaconda Environment
-All of the scripts are ran in HPC server using Anaconda environment. For installation of Anaconda environment, please follow https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html. Then import beoungl.yml following https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html. 
+All of the scripts are ran in HPC server using Anaconda environment. For installation of Anaconda environment, please follow [this instruction to set up Anaconda environment](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html). Then import [beoungl.yml](https://github.com/cvraut/CS189_project/blob/master/beoungl.yml) following [this instruction](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html). 
 *Make sure the Python version is in 2.7.
 
 ## 2) Pre-processing
