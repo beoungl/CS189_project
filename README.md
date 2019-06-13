@@ -36,6 +36,11 @@ If you have trouble doing this step, download this [multiple fasta sequence file
 
 ##### 3.2) ClustalW
 
+For this step, enter the command :
+
+```
+ClustalW
+```
 
 ##### 3.3) Etetoolkit treeviewer
 
