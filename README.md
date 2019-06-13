@@ -15,22 +15,26 @@ All of the scripts are ran in HPC server using Anaconda environment. For install
 *Make sure the Python version is in 2.7.
 
 ## 2) Pre-processing
-This process was required to filter out any data less than 1kb, and shorten contig name so it is easier to visualize in graph.s
+This process was required to filter out any data less than 1kb, and shorten contig name so it is easier to visualize in graph.
 
-###### 2.1) Filter conting less than 1kb
+##### 2.1) Data download
+Download data using follow [script].
+
+##### 2.2) Filter conting less than 1kb
 The data was processed using [python script](https://github.com/cvraut/CS189_project/blob/master/scripts/ren_condensed.py). 
 
-###### 2.2) Contig name change
+##### 2.3) Contig name change
 The conting name was changed to smaller, more presentable name using [python script](https://github.com/cvraut/CS189_project/blob/master/scripts/ren_contigs.py).
 
 ## 3) Phylogenetic tree
 In this step, phylogenetic tree was created using BLAST to find common gene amongst the yeast strains, ClustalW to obtain branch length between yeasts and Etetoolkit treeview to create phylogenetic tree.
 
-###### 3.1) BLAST
+##### 3.1) BLAST
+Common gene was found using BLAST. Following links have been used to find common gene in [W303](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastSearch&PROG_DEF=blastn&BLAST_SPEC=Assembly&ASSEMBLY_NAME=GCA_000766265.2), [SK1](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastSearch&PROG_DEF=blastn&BLAST_SPEC=Assembly&ASSEMBLY_NAME=GCA_002250225.1), and [g833-1B](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastSearch&PROG_DEF=blastn&BLAST_SPEC=Assembly&ASSEMBLY_NAME=GCA_000766265.2) using [yll065w](https://www.yeastgenome.org/locus/S000003988) yeastgenome.org. For Saccharomyces uvarum, we went into [BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome) and entered Saccharomyces uvarum under organism name and excluded Saccharomyces ceresiviae. 
 
-###### 3.2) ClustalW
+##### 3.2) ClustalW
 
-###### 3.3) Etetoolkit treeviewer
+##### 3.3) Etetoolkit treeviewer
 
 ## 4) Sastusma2
 
