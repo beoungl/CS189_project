@@ -51,15 +51,20 @@ Follow this [link](http://etetoolkit.org/treeview/). Clear both newick format an
 
 ## 5) MUMMER
 
-This process requires [nucmer.ls](), which contains names of fasta files that are used for comparison.
+This process requires [nucmer.ls](), which contains names of fasta files that are used for comparison. Follow [qsub_nucmer.sh](https://github.com/cvraut/CS189_project/blob/master/qsub_nucmer.sh).
 
 ##### 5.1) NUCMER
 
-Follow [qsub_nucmer.sh](https://github.com/cvraut/CS189_project/blob/master/qsub_nucmer.sh).
-
-This script takes each fasta file, and align each fasta file into reference genome S288C.
-
+This part of script takes each fasta file, and align each fasta file into reference genome S288C. REF represents refernce genome and SEED represents query sequence.
+```
+nucmer --maxmatch -c 100 -p ${SEED} ${REF} ${SEED}
+```
 ##### 5.2) Mummerplot
+
+This part of script takes output delta file and graph it using Mummerplot with png format.
+```
+mummerplot --png --fat --layout --filter ${SEED}.delta -R ${REF} -Q ${SEED} --prefix=${SEED}
+```
 
 ## 6) Conclusion
 Refer to the [final paper](https://docs.google.com/document/d/1KNQ6TGLGn5cANC1CSuzZIuPjTDEG9VN8L9dKRxzwwns/edit) for conclusion and analysis.
