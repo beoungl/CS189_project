@@ -41,8 +41,11 @@ For this step, enter the command :
 ```
 ClustalW
 ```
+, then the interactive mode for ClustalW will appear. 
 
 ##### 3.3) Etetoolkit treeviewer
+
+Follow this [link](http://etetoolkit.org/treeview/). Clear both newick format and fasta file, then paste your result under newick format. Click view tree, and phylogenetic tree should be generated.
 
 ## 4) Sastusma2
 
