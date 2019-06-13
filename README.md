@@ -39,9 +39,9 @@ If you have trouble doing this step, download this [multiple fasta sequence file
 For this step, enter the command :
 
 ```
-ClustalW
+clustalw
 ```
-, then the interactive mode for ClustalW will appear. 
+, then the interactive mode for ClustalW will appear. Enter 4 for phylogenetic tree, then enter 1 to input alignment. Type the name of your sequence file, then enter 4 to draw tree. 
 
 ##### 3.3) Etetoolkit treeviewer
 
