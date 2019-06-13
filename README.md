@@ -65,8 +65,11 @@ This part of script takes output delta file and graph it using Mummerplot with p
 ```
 mummerplot --png --fat --layout --filter ${SEED}.delta -R ${REF} -Q ${SEED} --prefix=${SEED}
 ```
+## 6) Statistcal analysis
 
-## 6) Conclusion
+N50 score was analyzed using following python script.
+
+# Conclusion
 Refer to the [final paper](https://docs.google.com/document/d/1KNQ6TGLGn5cANC1CSuzZIuPjTDEG9VN8L9dKRxzwwns/edit) for conclusion and analysis.
 
 # Directory tree
