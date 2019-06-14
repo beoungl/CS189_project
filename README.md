@@ -77,6 +77,15 @@ Following code creates output as out format, and this out format is then used in
 
 ##### 4.2) BlockDisplaySatusma
 
+Follow [gen_figs.sh](https://github.com/beoungl/CS189_project/blob/master/gen_figs.sh)
+
+In this script, BlockDisplaySatsuma takes out file from Satsuma2, and produces image below. The output is in postscript format.
+
+```
+BlockDisplaySatsuma -i outputs/g833-1B_reference/satsuma_summary.chained.out -t data/S288C_reference.fasta -q data/g833-1B_reference.fasta > S288C_v_g833.out
+ChromosomePaint -d 10 -s 400 -i S288C_v_g833.out -o S288C_v_g833.ps
+```
+
 ![Alt text](https://github.com/beoungl/CS189_project/blob/master/w303_satsuma.png)
 
 ## 5) MUMMER
