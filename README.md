@@ -120,6 +120,8 @@ Refer to the [final paper](https://docs.google.com/document/d/1KNQ6TGLGn5cANC1CS
 
 # Directory tree
 
+**Nucmer_pdf and nucmer_ps directories are not included in this tree, as they are huge folder that were byproducts of experiment.
+
 ```
 |-- assembly_stats
 |   |-- g833-1B_reference.stats
