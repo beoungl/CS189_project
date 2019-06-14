@@ -12,7 +12,7 @@
 #$ -pe openmp 8-32
 
 source /data/users/beoungl/bin/.miniconda3testrc
-cd /pub/${USER}/CS189_backup/data
+cd /pub/${USER}/CS189_project/data
 conda --version
 conda activate project1
 
