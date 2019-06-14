@@ -28,7 +28,7 @@ Data for this project can be found in yeastgenome.org. [S288C](https://www.yeast
 However, to reproduce exactly same data, you could also use this [genomes](https://github.com/beoungl/CS189_project/tree/master/data/originals) that we used for experiment, in case genome has been updated.
 
 ##### 2.2) Filter conting less than 1kb
-The data was processed using [python script](https://github.com/cvraut/CS189_project/blob/master/scripts/ren_condensed.py). This python script remove any contig less than 1kb and change their name to more conscise, presentable name so it is easier to display them on graph/images.
+The data was processed using [python script](https://github.com/beoungl/CS189_project/blob/master/scripts/ren_condensed.py). This python script remove any contig less than 1kb and change their name to more conscise, presentable name so it is easier to display them on graph/images.
 
 ## 3) Phylogenetic tree
 In this step, phylogenetic tree was created using BLAST to find common gene amongst the yeast strains, ClustalW to obtain branch length between yeasts and Etetoolkit treeview to create phylogenetic tree.
