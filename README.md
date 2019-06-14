@@ -51,7 +51,7 @@ clustalw
 
 Follow this [link](http://etetoolkit.org/treeview/). Clear both newick format and fasta file, then paste your result under newick format. Click view tree, and phylogenetic tree should be generated.
 
-
+![Alt text](https://github.com/beoungl/CS189_project/blob/master/Phylo_tree.PNG)
 
 ## 4) Sastusma2
 
