@@ -61,7 +61,7 @@ Follow this [link](http://etetoolkit.org/treeview/). Clear both newick format an
 
 ##### 4.2) BlockDisplaySatusma
 
-
+![Alt text](https://github.com/beoungl/CS189_project/blob/master/w303_satsuma.png)
 
 ## 5) MUMMER
 
@@ -79,6 +79,9 @@ This part of script takes output delta file and graph it using Mummerplot with p
 ```
 mummerplot --png --fat --layout --filter ${SEED}.delta -R ${REF} -Q ${SEED} --prefix=${SEED}
 ```
+
+![Alt text](https://github.com/beoungl/CS189_project/blob/master/nucmer_png/SK1_new.fasta.png)
+
 ## 6) Assemblystats
 
 N50 score was analyzed using Assemblystats.
