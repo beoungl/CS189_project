@@ -8,7 +8,8 @@ The goal of this experiment was originally to compare genomes of 5 different yea
 
 # Pipeline
 
-The pipeline for this project is available on this github. 
+The pipeline for this project is available on this github. The pipeline followed the process that looks like this chart below:
+
 
 
 Phylogenetic tree processing requires NCBI BLAST, ClustalW, and Etetoolkit online tree viewer. Satsuma2 and Chromosomepaint requires two different script, while MUMMER is completed using one script. Assemblystats require only one script as well. Result can be seen in the [final paper](https://docs.google.com/document/d/1KNQ6TGLGn5cANC1CSuzZIuPjTDEG9VN8L9dKRxzwwns/edit).
@@ -17,7 +18,7 @@ Phylogenetic tree processing requires NCBI BLAST, ClustalW, and Etetoolkit onlin
 # Pipeline steps
 
 ## 1) Setting Up Anaconda Environment
-All of the scripts are ran in HPC server using Anaconda environment. For installation of Anaconda environment, please follow [this instruction to set up Anaconda environment](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html). Then import [beoungl.yml](https://github.com/beoungl/CS189_project/blob/master/beoungl.yml) following [this instruction](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html). 
+All of the scripts are ran in HPC server using Anaconda environment. For installation of Anaconda environment, please follow [this instruction to set up Anaconda environment](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html). Then import [comparative_genomics.yml](https://github.com/beoungl/CS189_project/blob/master/comparative_genome.yml) following [this instruction](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html). 
 *Make sure the Python version is in 2.7.
 
 ## 2) Downloading Genome and Pre-processing
