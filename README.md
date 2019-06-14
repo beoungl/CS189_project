@@ -8,7 +8,10 @@ The goal of this experiment was originally to compare genomes of 5 different yea
 
 # Pipeline
 
-The pipeline for this project is available on this github.
+The pipeline for this project is available on this github. 
+
+
+Phylogenetic tree processing requires NCBI BLAST, ClustalW, and Etetoolkit online tree viewer. Satsuma2 and Chromosomepaint requires two different script, while MUMMER is completed using one script. Assemblystats require only one script as well. Result can be seen in the [final paper](https://docs.google.com/document/d/1KNQ6TGLGn5cANC1CSuzZIuPjTDEG9VN8L9dKRxzwwns/edit).
 
 
 # Pipeline steps
@@ -69,13 +72,14 @@ This process requires [nucmer.ls](), which contains names of fasta files that ar
 
 ##### 5.1) NUCMER
 
-This part of script takes each fasta file, and align each fasta file into reference genome S288C. REF represents refernce genome and SEED represents query sequence.
+This part of script takes each fasta file, and align each fasta file into reference genome S288C. REF represents refernce genome and SEED represents query sequence. The main output is delta file.
 ```
 nucmer --maxmatch -c 100 -p ${SEED} ${REF} ${SEED}
 ```
 ##### 5.2) Mummerplot
 
-This part of script takes output delta file and graph it using Mummerplot with png format.
+This part of script takes output delta file and graph it using Mummerplot with png format. X-axsis represents reference genome and y-axis represents query genome. Line represents continuity, while dots represents translocaton or indels.
+
 ```
 mummerplot --png --fat --layout --filter ${SEED}.delta -R ${REF} -Q ${SEED} --prefix=${SEED}
 ```
