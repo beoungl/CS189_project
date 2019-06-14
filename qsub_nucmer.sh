@@ -18,8 +18,8 @@ conda activate project1
 
 echo "Running nucmer"
 
-REF=$(cat nucmer.ls | head -n 1)
-SEED=$(cat nucmer.ls | head -n $((${SGE_TASK_ID}+1)) | tail -n 1)
+REF=$(cat dat.ls | head -n 1)
+SEED=$(cat dat.ls | head -n $((${SGE_TASK_ID}+1)) | tail -n 1)
 ##SEED=${SEED%%.*}
 
 
