@@ -108,3 +108,271 @@ Refer to the [final paper](https://docs.google.com/document/d/1KNQ6TGLGn5cANC1CS
 
 # Directory tree
 
+```
+|-- assembly_stats
+|   |-- g833-1B_reference.stats
+|   |-- S288C_reference.stats
+|   |-- SK1_reference.stats
+|   |-- suvarum_cbs7001.stats
+|   `-- W303_reference.stats
+|-- beoungl.yml
+|-- data
+|   |-- 18s
+|   |   |-- S288C.fasta
+|   |   |-- SK1.fasta
+|   |   `-- W303.fasta
+|   |-- 18s_rrna.aa.fasta
+|   |-- dat.ls
+|   |-- g833-1B_reference.fasta
+|   |-- originals
+|   |   |-- g833-1B_reference.fasta
+|   |   |-- S288C_reference.fasta
+|   |   |-- SK1_reference.fasta
+|   |   |-- suvarum_cbs7001.fasta
+|   |   `-- W303_reference.fasta
+|   |-- README
+|   |-- S288C_reference.fasta
+|   |-- SK1_reference.fasta
+|   |-- smol
+|   |   |-- g833-1B_reference.fasta
+|   |   |-- S288C_reference.fasta
+|   |   |-- SK1_reference.fasta
+|   |   |-- suvarum_cbs7001.fasta
+|   |   |-- W303_reference.fasta
+|   |   `-- yeast.txt
+|   |-- suvarum_cbs7001.fasta
+|   `-- W303_reference.fasta
+|-- gen_figs.sh
+|-- hub
+|   |-- Anc0
+|   |   |-- Anc0.2bit
+|   |   |-- chrom.sizes
+|   |   |-- description.html
+|   |   `-- trackDb.txt
+|   |-- bayanus_uvarum_strain_CBS7001
+|   |   |-- bayanus_uvarum_strain_CBS7001.2bit
+|   |   |-- chrom.sizes
+|   |   |-- description.html
+|   |   `-- trackDb.txt
+|   |-- cerevisiae_strain_g833-1B
+|   |   |-- cerevisiae_strain_g833-1B.2bit
+|   |   |-- chrom.sizes
+|   |   |-- description.html
+|   |   `-- trackDb.txt
+|   |-- cerevisiae_strain_S288C
+|   |   |-- cerevisiae_strain_S288C.2bit
+|   |   |-- chrom.sizes
+|   |   |-- description.html
+|   |   `-- trackDb.txt
+|   |-- cerevisiae_strain_SK1
+|   |   |-- cerevisiae_strain_SK1.2bit
+|   |   |-- chrom.sizes
+|   |   |-- description.html
+|   |   `-- trackDb.txt
+|   |-- cerevisiae_strain_W303
+|   |   |-- cerevisiae_strain_W303.2bit
+|   |   |-- chrom.sizes
+|   |   |-- description.html
+|   |   `-- trackDb.txt
+|   |-- documentation
+|   |   `-- hubCentral.html
+|   |-- genomes.txt
+|   |-- groups.txt
+|   |-- haltree.nw
+|   |-- hub.txt
+|   |-- lod
+|   |   |-- yeast_lod_1531.hal
+|   |   |-- yeast_lod_23935.hal
+|   |   |-- yeast_lod_245.hal
+|   |   |-- yeast_lod_3829.hal
+|   |   |-- yeast_lod_59837.hal
+|   |   |-- yeast_lod_612.hal
+|   |   |-- yeast_lod_9574.hal
+|   |   `-- yeast_lod_98.hal
+|   |-- lod.txt
+|   `-- yeast.hal -> /dfs3/pub/beoungl/CS189_project/outputs_satsuma_cactus_take1/yeast.hal
+
+|-- nucmer_png
+|   |-- g833-1B_reference.fasta.png
+|   |-- g833_new.fasta.png
+|   |-- g833_xy.png
+|   |-- old_g833.png
+|   |-- old_SK1.png
+|   |-- old_suvarum.png
+|   |-- old_W303.png
+|   |-- out.png
+|   |-- SK1_new.fasta.png
+|   |-- SK1_reference.fasta.png
+|   |-- SK1_reference.png
+|   |-- SK1_xy.png
+|   |-- suvarum_cbs7001.fasta.png
+|   |-- suvarum_cbs7001_new.fasta.png
+|   |-- suvarum_xy.png
+|   |-- W303_new.fasta.png
+|   |-- W303_reference.fasta.png
+|   `-- W303_xy.png
+|-- outputs
+|   |-- g833-1B_reference
+|   |   |-- kmatch_results.k11
+|   |   |-- kmatch_results.k13
+|   |   |-- kmatch_results.k15
+|   |   |-- kmatch_results.k17
+|   |   |-- kmatch_results.k19
+|   |   |-- kmatch_results.k21
+|   |   |-- kmatch_results.k23
+|   |   |-- kmatch_results.k25
+|   |   |-- kmatch_results.k27
+|   |   |-- kmatch_results.k29
+|   |   |-- kmatch_results.k31
+|   |   |-- MergeXCorrMatches.chained.out
+|   |   |-- satsuma.log
+|   |   |-- satsuma_summary.chained.out
+|   |   `-- xcorr_aligns.final.out
+|   |-- SK1_reference
+|   |   |-- kmatch_results.k11
+|   |   |-- kmatch_results.k13
+|   |   |-- kmatch_results.k15
+|   |   |-- kmatch_results.k17
+|   |   |-- kmatch_results.k19
+|   |   |-- kmatch_results.k21
+|   |   |-- kmatch_results.k23
+|   |   |-- kmatch_results.k25
+|   |   |-- kmatch_results.k27
+|   |   |-- kmatch_results.k29
+|   |   |-- kmatch_results.k31
+|   |   |-- MergeXCorrMatches.chained.out
+|   |   |-- satsuma.log
+|   |   |-- satsuma_summary.chained.out
+|   |   `-- xcorr_aligns.final.out
+|   |-- suvarum_cbs7001
+|   |   |-- kmatch_results.k11
+|   |   |-- kmatch_results.k13
+|   |   |-- kmatch_results.k15
+|   |   |-- kmatch_results.k17
+|   |   |-- kmatch_results.k19
+|   |   |-- kmatch_results.k21
+|   |   |-- kmatch_results.k23
+|   |   |-- kmatch_results.k25
+|   |   |-- kmatch_results.k27
+|   |   |-- kmatch_results.k29
+|   |   |-- kmatch_results.k31
+|   |   |-- MergeXCorrMatches.chained.out
+|   |   |-- satsuma.log
+|   |   |-- satsuma_summary.chained.out
+|   |   `-- xcorr_aligns.final.out
+|   `-- W303_reference
+|       |-- kmatch_results.k11
+|       |-- kmatch_results.k13
+|       |-- kmatch_results.k15
+|       |-- kmatch_results.k17
+|       |-- kmatch_results.k19
+|       |-- kmatch_results.k21
+|       |-- kmatch_results.k23
+|       |-- kmatch_results.k25
+|       |-- kmatch_results.k27
+|       |-- kmatch_results.k29
+|       |-- kmatch_results.k31
+|       |-- MergeXCorrMatches.chained.out
+|       |-- satsuma.log
+|       |-- satsuma_summary.chained.out
+|       `-- xcorr_aligns.final.out
+|-- outputs_satsuma_cactus_take1
+|   |-- g833-1B_reference
+|   |   |-- kmatch_results.k11
+|   |   |-- kmatch_results.k13
+|   |   |-- kmatch_results.k15
+|   |   |-- kmatch_results.k17
+|   |   |-- kmatch_results.k19
+|   |   |-- kmatch_results.k21
+|   |   |-- kmatch_results.k23
+|   |   |-- kmatch_results.k25
+|   |   |-- kmatch_results.k27
+|   |   |-- kmatch_results.k29
+|   |   |-- kmatch_results.k31
+|   |   |-- MergeXCorrMatches.chained.out
+|   |   |-- satsuma.log
+|   |   |-- satsuma_summary.chained.out
+|   |   `-- xcorr_aligns.final.out
+|   |-- S288C_reference
+|   |   |-- kmatch_results.k11
+|   |   |-- kmatch_results.k11.finished
+|   |   |-- kmatch_results.k13
+|   |   |-- kmatch_results.k13.finished
+|   |   |-- kmatch_results.k15
+|   |   |-- kmatch_results.k15.finished
+|   |   |-- kmatch_results.k17
+|   |   |-- kmatch_results.k17.finished
+|   |   `-- satsuma.log
+|   |-- SK1_reference
+|   |   |-- kmatch_results.k11
+|   |   |-- kmatch_results.k13
+|   |   |-- kmatch_results.k15
+|   |   |-- kmatch_results.k17
+|   |   |-- kmatch_results.k19
+|   |   |-- kmatch_results.k21
+|   |   |-- kmatch_results.k23
+|   |   |-- kmatch_results.k25
+|   |   |-- kmatch_results.k27
+|   |   |-- kmatch_results.k29
+|   |   |-- kmatch_results.k31
+|   |   |-- MergeXCorrMatches.chained.out
+|   |   |-- satsuma.log
+|   |   |-- satsuma_summary.chained.out
+|   |   `-- xcorr_aligns.final.out
+|   |-- suvarum_cbs7001
+|   |   |-- kmatch_results.k11
+|   |   |-- kmatch_results.k13
+|   |   |-- kmatch_results.k15
+|   |   |-- kmatch_results.k17
+|   |   |-- kmatch_results.k19
+|   |   |-- kmatch_results.k21
+|   |   |-- kmatch_results.k23
+|   |   |-- kmatch_results.k25
+|   |   |-- kmatch_results.k27
+|   |   |-- kmatch_results.k29
+|   |   |-- kmatch_results.k31
+|   |   `-- satsuma.log
+|   |-- W303_reference
+|   |   |-- kmatch_results.k11
+|   |   |-- kmatch_results.k13
+|   |   |-- kmatch_results.k15
+|   |   |-- kmatch_results.k17
+|   |   |-- kmatch_results.k19
+|   |   |-- kmatch_results.k21
+|   |   |-- kmatch_results.k23
+|   |   |-- kmatch_results.k25
+|   |   |-- kmatch_results.k27
+|   |   |-- kmatch_results.k29
+|   |   |-- kmatch_results.k31
+|   |   |-- MergeXCorrMatches.chained.out
+|   |   |-- satsuma.log
+|   |   |-- satsuma_summary.chained.out
+|   |   `-- xcorr_aligns.final.out
+|   `-- yeast.hal
+|-- packages.list
+|-- papers
+|   |-- examples
+|   |   |-- hidden_genetic_variation_shapes_the_structure_of_functional_elements_in_drosophila.pdf
+|   |   |-- long_read_sequence_assembly_of_the_gorilla_genome.pdf
+|   |   |-- structural_variants_clonal_propagation_and_genome_evolution_in_grapevine.pdf
+|   |   |-- structural_variants_exhibit_allelic_heterogeneity_and_shape_variation_in_complex_traits.pdf
+|   |   `-- syntenic_gene_analysis_between_brassica_rapa_and_other_brassicaceae_species.pdf
+|   `-- protocol
+|       |-- cactus_algorithms_for_genome_multiple_sequence_alignment.pdf
+|       |-- cinteny_flexible_analysis_and_visualization_of_synteny_and_genome_rearrangements_in_multiple_organisms.pdf
+|       |-- inferring_synteny_between_genome_assemblies_a_systematic_evaluation.pdf
+|       |-- simplesynteny_a_web_based_tool_for_visualization_of.pdf
+|       `-- synchro_a_fast_and_easy_tool_to_reconstruct_and_visualize_synteny_blocks_along_eukaryotic_chromosomes.PDF
+|-- qsub_nucmer.sh
+|-- qsub_satsuma.sh
+|-- README.md
+|-- sample_pipeline.txt
+|-- scripts
+|   |-- gen_mini_fasta.py
+|   |-- get_contig_desc.py
+|   |-- ren_condensed.py
+|   `-- ren_contigs.py
+|-- yeast.txt
+|-- yll065w.fasta
+`-- yll065w.ph
+```
