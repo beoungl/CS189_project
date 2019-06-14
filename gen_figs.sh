@@ -1,6 +1,6 @@
-source ~/.miniconda3rc
-conda activate cg_yeast
-cd /pub/craut/CS189_project
+source /data/users/beoungl/bin/.miniconda3testrc
+conda activate project1
+cd /pub/beoungl/CS189_project
 MicroSyntenyPlot -i outputs/g833-1B_reference/xcorr_aligns.final.out -s 4000 -o g833-1B.ps
 MicroSyntenyPlot -i outputs/SK1_reference/xcorr_aligns.final.out -s 4000 -o SK1.ps
 MicroSyntenyPlot -i outputs/suvarum_cbs7001/xcorr_aligns.final.out -s 4000 -o cbs7001.ps
