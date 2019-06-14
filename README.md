@@ -4,7 +4,7 @@ Comparitive genomics project
 
 # Background
 
-The goal of this experiment was originally to compare genomes of 5 different yeast strains. However, we found that the similarity of genome can be affected by contiguity depending on the types of program used.
+The goal of this experiment was originally to compare genomes of 5 different yeast strains. S288C was used as a refernce genome, as it is the yeast genome that has been stuided most, and was most contiguous. W303 was derived from the S288C. SK1 diverges more from S288C than W303, and g833-1B is haploid dervative of SK1. Saccharomyces uvarum is different species of yeast, as other 4 strains are Saccharomyces ceresiviae. In this experiment, we found that the similarity of genome can be affected by contiguity depending on the types of program used.
 
 # Pipeline
 
@@ -24,7 +24,7 @@ All of the scripts are ran in HPC server using Anaconda environment. For install
 This process was required to filter out any data less than 1kb, and shorten contig name so it is easier to visualize in graph.
 
 ##### 2.1) Data download
-Data for this project can be found in yeastgenome.org. [S288C](https://www.yeastgenome.org/strain/S000203483), [SK1](https://www.yeastgenome.org/strain/S000204513), W303(https://www.yeastgenome.org/strain/S000203491), [g833-1B](https://www.yeastgenome.org/strain/S000203504) and [Saccharomyces uvarum](https://sgd-prod-upload.s3.amazonaws.com/S000209332/CBS7001_UColDMed_2011_SRX055453.fsa.gz).
+Data for this project can be found in yeastgenome.org. [S288C](https://www.yeastgenome.org/strain/S000203483), [SK1](https://www.yeastgenome.org/strain/S000204513), [W303](https://www.yeastgenome.org/strain/S000203491), [g833-1B](https://www.yeastgenome.org/strain/S000203504) and [Saccharomyces uvarum](https://sgd-prod-upload.s3.amazonaws.com/S000209332/CBS7001_UColDMed_2011_SRX055453.fsa.gz).
 However, to reproduce exactly same data, you could also use this [genomes](https://github.com/beoungl/CS189_project/tree/master/data/originals) that we used for experiment, in case genome has been updated.
 
 ##### 2.2) Filter conting less than 1kb
@@ -58,9 +58,22 @@ Follow this [link](http://etetoolkit.org/treeview/). Clear both newick format an
 
 ## 4) Sastusma2
 
+There were two scripts for this part of experiment, [gen_fig.sh](https://github.com/beoungl/CS189_project/blob/master/gen_figs.sh) and [qsub_satsuma.sh](https://github.com/beoungl/CS189_project/blob/master/qsub_satsuma.sh). Before running the script, make sure to make outputs directory using:
+
+```
+mkdir outputs
+````
+
 ##### 4.1) Satsuma
 
+Follow [qsub_satsuma.sh](https://github.com/beoungl/CS189_project/blob/master/qsub_satsuma.sh) for detail.
 
+In this script, Satusma2 takes S288C as reference genome, and align other genome individually as a query genome. ****WARNING: MAKE SURE TO HAVE OUTPUTS DIRECTORY BEFORE RUNNING THE SCRIPT, AS THIS SCRIPT CAN POTENTIALLY DELETE ALL FILES IN DIRECTORY IF OUTPUTS DIRECTORY IS NOT PRESENT.
+
+```
+SatsumaSynteny2 -t data/${REF} -q data/${SEED}.fasta -o outputs/${SEED}
+```
+Following code creates output as out format, and this out format is then used in BlockDisplaySatusma to visualized.
 
 ##### 4.2) BlockDisplaySatusma
 
