@@ -20,7 +20,7 @@ Phylogenetic tree processing requires NCBI BLAST, ClustalW, and Etetoolkit onlin
 All of the scripts are ran in HPC server using Anaconda environment. For installation of Anaconda environment, please follow [this instruction to set up Anaconda environment](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html). Then import [beoungl.yml](https://github.com/beoungl/CS189_project/blob/master/beoungl.yml) following [this instruction](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html). 
 *Make sure the Python version is in 2.7.
 
-## 2) Pre-processing
+## 2) Downloading Genome and Pre-processing
 This process was required to filter out any data less than 1kb, and shorten contig name so it is easier to visualize in graph.
 
 ##### 2.1) Data download
@@ -28,10 +28,7 @@ Data for this project can be found in yeastgenome.org. [S288C](https://www.yeast
 However, to reproduce exactly same data, you could also use this [genomes](https://github.com/beoungl/CS189_project/tree/master/data/originals) that we used for experiment, in case genome has been updated.
 
 ##### 2.2) Filter conting less than 1kb
-The data was processed using [python script](https://github.com/cvraut/CS189_project/blob/master/scripts/ren_condensed.py). 
-
-##### 2.3) Contig name change
-The conting name was changed to smaller, more presentable name using [python script](https://github.com/cvraut/CS189_project/blob/master/scripts/ren_contigs.py).
+The data was processed using [python script](https://github.com/cvraut/CS189_project/blob/master/scripts/ren_condensed.py). This python script remove any contig less than 1kb and change their name to more conscise, presentable name so it is easier to display them on graph/images.
 
 ## 3) Phylogenetic tree
 In this step, phylogenetic tree was created using BLAST to find common gene amongst the yeast strains, ClustalW to obtain branch length between yeasts and Etetoolkit treeview to create phylogenetic tree.
@@ -87,6 +84,12 @@ ChromosomePaint -d 10 -s 400 -i S288C_v_g833.out -o S288C_v_g833.ps
 ```
 
 ![Alt text](https://github.com/beoungl/CS189_project/blob/master/w303_satsuma.png)
+
+```
+MicroSyntenyPlot -i outputs/g833-1B_reference/xcorr_aligns.final.out -s 4000 -o g833-1B.ps
+```
+
+This part of script is optional and will generate MicrosyntennyPlot that looks like this.
 
 ## 5) MUMMER
 
