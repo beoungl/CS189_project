@@ -10,7 +10,7 @@ The goal of this experiment was originally to compare genomes of 5 different yea
 
 The pipeline for this project is available on this github. The pipeline followed the process that looks like this chart below:
 
-
+![Alt text](https://github.com/beoungl/CS189_project/blob/master/pipeline.png)
 
 Phylogenetic tree processing requires NCBI BLAST, ClustalW, and Etetoolkit online tree viewer. Satsuma2 and Chromosomepaint requires two different script, while MUMMER is completed using one script. Assemblystats require only one script as well. Result can be seen in the [final paper](https://docs.google.com/document/d/1KNQ6TGLGn5cANC1CSuzZIuPjTDEG9VN8L9dKRxzwwns/edit).
 
@@ -37,7 +37,7 @@ In this step, phylogenetic tree was created using BLAST to find common gene amon
 ##### 3.1) BLAST
 Common gene was found using BLAST. Following links have been used to find common gene in [W303](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastSearch&PROG_DEF=blastn&BLAST_SPEC=Assembly&ASSEMBLY_NAME=GCA_000766265.2), [SK1](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastSearch&PROG_DEF=blastn&BLAST_SPEC=Assembly&ASSEMBLY_NAME=GCA_002250225.1), and [g833-1B](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastSearch&PROG_DEF=blastn&BLAST_SPEC=Assembly&ASSEMBLY_NAME=GCA_000766265.2) using [yll065w](https://www.yeastgenome.org/locus/S000003988) yeastgenome.org. For Saccharomyces uvarum, we went into [BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome) and entered Saccharomyces uvarum under organism name, excluded Saccharomyces ceresiviae, and used BLASTN as an alignment option. After finding alignment through BLAST, copy and paste the gene onto one file, and if there are gaps between sequences, manually enter N's in between. 
 
-If you have trouble doing this step, download this [multiple fasta sequence file](https://github.com/cvraut/CS189_project/blob/master/yll065w.fasta).
+If you have trouble doing this step, download this [multiple fasta sequence file](https://github.com/beoungl/CS189_project/blob/master/yll065w.fasta).
 
 ##### 3.2) ClustalW
 
@@ -94,7 +94,7 @@ This part of script is optional and will generate MicrosyntennyPlot that looks l
 
 ## 5) MUMMER
 
-This process requires [nucmer.ls](), which contains names of fasta files that are used for comparison. Follow [qsub_nucmer.sh](https://github.com/cvraut/CS189_project/blob/master/qsub_nucmer.sh).
+This process requires [nucmer.ls](), which contains names of fasta files that are used for comparison. Follow [qsub_nucmer.sh](https://github.com/beoungl/CS189_project/blob/master/qsub_nucmer.sh).
 
 ##### 5.1) NUCMER
 
