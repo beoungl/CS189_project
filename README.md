@@ -116,10 +116,10 @@ mummerplot --png --fat --layout --filter ${SEED}.delta -R ${REF} -Q ${SEED} --pr
 
 ## 6) Assembly-stats
 
-N50 score was analyzed using Assemblystats, using the follow command line:
+N50 score was analyzed using Assemblystats with following [script](https://github.com/beoungl/CS189_project/blob/master/gen_n50s.sh) using the following command line:
 
 ```
-
+assembly-stats data/SK1_reference.fasta > assembly_stats/SK1_reference.stats
 ```
 
 The resulting N50 score should look simlar to this table (ignore sequencing technology column, as they were not obtained through Assembly-stats) :
