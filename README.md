@@ -92,6 +92,8 @@ MicroSyntenyPlot -i outputs/g833-1B_reference/xcorr_aligns.final.out -s 4000 -o 
 
 This part of script is optional and will generate MicrosyntennyPlot that looks like this.
 
+![Alt text](https://github.com/beoungl/CS189_project/blob/master/microsyntenny/SK1-1.png)
+
 ## 5) MUMMER
 
 This process requires [nucmer.ls](), which contains names of fasta files that are used for comparison. Follow [qsub_nucmer.sh](https://github.com/beoungl/CS189_project/blob/master/qsub_nucmer.sh).
