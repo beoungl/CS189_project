@@ -114,9 +114,14 @@ mummerplot --png --fat --layout --filter ${SEED}.delta -R ${REF} -Q ${SEED} --pr
 
 ![Alt text](https://github.com/beoungl/CS189_project/blob/master/nucmer_png/SK1_new.fasta.png)
 
-## 6) Assemblystats
+## 6) Assembly-stats
 
 N50 score was analyzed using Assemblystats.
+
+The resulting N50 score should look simlar to this table (ignore sequencing technology column, as they were not obtained through Assembly-stats):
+
+![Alt text](https://github.com/beoungl/CS189_project/blob/master/n50.png)
+
 
 # Conclusion
 Refer to the [final paper](https://docs.google.com/document/d/1KNQ6TGLGn5cANC1CSuzZIuPjTDEG9VN8L9dKRxzwwns/edit) for conclusion and analysis.
